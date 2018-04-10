@@ -1,21 +1,10 @@
 # vue-sell
 
-> A Vue.js project
+> 高仿饿了么外卖app
+> 视频地址：[https://coding.imooc.com/class/74.html]
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 项目说明
+此项目使用vue-cli官方脚手架开发。
+因为视频发布时还是vue1.0，所以在学习的过程中使用了vue2.0。
+在次基础上，使用vw实现了移动端适配。学习文章：[https://www.w3cplus.com/mobile/vw-layout-in-vue.html]
+通过这个项目让我更深的了解了vue的一些特性和机制，感谢黄老师的课程。
