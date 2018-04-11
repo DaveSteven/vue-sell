@@ -99,14 +99,11 @@ export default {
       
       this.$emit('detail-display-control', this.detailDisplay);
     }
-  },
-  mounted() {
-    console.log(this.seller);
   }
 };
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 @import '../../common/stylus/base.styl';
 @import '../../common/stylus/mixin';
 

@@ -206,11 +206,12 @@ export default {
     padding: 36px
 
     li
+      margin-bottom: 36px
       padding: 0 0 36px 80px
       border-1px(rgba(7, 17, 27, 0.2))
 
-      + li
-        margin-top: 36px
+      &:last-child
+        margin: 0
 
     [user-info]
       display: flex;
