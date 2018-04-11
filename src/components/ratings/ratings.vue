@@ -113,9 +113,15 @@ export default {
     },
     switchRatings(type) {
       this.selectType = type;
+      this.$nextTick(() => {
+        this.scroll.refresh();
+      });
     },
     toggleOnlyContent() {
       this.onlyContent = !this.onlyContent;
+      this.$nextTick(() => {
+        this.scroll.refresh();
+      });
     }
   },
   created() {

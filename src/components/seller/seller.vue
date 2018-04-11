@@ -195,7 +195,7 @@ export default {
         border-1px(rgba(7, 17, 27, 0.2))
         
         [content]
-          font-size: 12px
+          font-size: 24px
           color: rgb(240, 20, 20)
           line-height: 48px
       
@@ -225,6 +225,7 @@ export default {
             margin-right: 12px
             width: 240px
             height: 180px
+            overflow: hidden
             
             &:last-child
               margin-right: 0

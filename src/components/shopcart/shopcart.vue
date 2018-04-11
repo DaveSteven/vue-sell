@@ -26,7 +26,7 @@
         </div>
       </div>
       <transition name="fold">
-        <div shopcart-list v-show="listShow">
+        <div shopcart-list v-show="fold">
           <div list-header class="border-1px">
             <h4 title>购物车</h4>
             <span empty @click="empty">清空</span>
@@ -48,7 +48,7 @@
       </transition>
     </div>
     <transition name="fade">
-      <div shopcart-mask v-show="listShow" @click="hideList"></div>
+      <div shopcart-mask v-show="fold" @click="hideList"></div>
     </transition>
   </div>
 </template>
@@ -91,10 +91,22 @@ export default {
         },
         {
           show: false
+        },
+        {
+          show: false
+        },
+        {
+          show: false
+        },
+        {
+          show: false
+        },
+        {
+          show: false
         }
       ],
       dropBalls: [],
-      fold: true
+      fold: false
     };
   },
   computed: {
@@ -120,12 +132,15 @@ export default {
     },
     payClass() {
       return this.totalPrice >= this.minPrice ? 'enough' : 'not-enough';
-    },
-    listShow() {
+    }
+  },
+  watch: {
+    totalCount() {
       if (!this.totalCount) {
-        this.fold = true;
-        return false;
+        this.fold = false;
       }
+    },
+    fold() {
       let show = !this.fold;
       if (show) {
         if (!this.scroll) {
@@ -138,7 +153,6 @@ export default {
           this.scroll.refresh();
         }
       }
-      return show;
     }
   },
   methods: {
@@ -200,7 +214,7 @@ export default {
       });
     },
     hideList() {
-      this.fold = true;
+      this.fold = false;
     },
     pay() {
       if (this.totalPrice < this.minPrice) {
